@@ -14,10 +14,6 @@ function Header() {
     marginLeft: "23px",
   };
 
-  const homeLinkStyle = {
-    color: orangeColor,
-  };
-
   const buttonStyle = {
     backgroundColor: orangeColor,
     color: "white",
@@ -77,10 +73,10 @@ function Header() {
             </div>
             <div className="col-lg-5 px-5 text-end">
               <div className="d-inline-flex align-items-center py-2">
-                <a className="btn btn-light btn-square rounded-circle me-2" target="_blank" href="https://www.linkedin.com/in/sebastian-benavides-heins/">
+                <a className="btn btn-light btn-square rounded-circle me-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sebastian-benavides-heins/">
                   <FontAwesomeIcon icon={faLinkedin} style={{ color: orangeColor }} />
                 </a>
-                <a className="btn btn-light btn-square rounded-circle me-2" target="_blank" href="https://github.com/Sebasbh">
+                <a className="btn btn-light btn-square rounded-circle me-2" target="_blank" rel="noreferrer"  href="https://github.com/Sebasbh">
                   <FontAwesomeIcon icon={faGithub} style={{ color: orangeColor }} />
                 </a>
               </div>

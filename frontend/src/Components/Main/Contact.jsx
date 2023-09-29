@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -19,11 +20,35 @@ function Contact() {
       return;
     }
 
-    // Your form submission logic here
+    // Enviar el correo electrónico usando Email.js
+    const templateParams = {
+      from_name: e.target.from_name.value,
+      from_email: e.target.from_email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+
+    emailjs.send(
+      'service_4mlcvrg', // Reemplaza con tu Service ID de Email.js
+      'template_6ebupf9', // Reemplaza con tu Template ID de Email.js
+      templateParams,
+      "FToI26mpXhvJO4asw"
+    )
+    .then((response) => {
+      console.log('Correo electrónico enviado con éxito', response);
+      alert('Correo electrónico enviado con éxito');
+    })
+    .catch((error) => {
+      console.error('Error al enviar el correo electrónico', error);
+      alert('Error al enviar el correo electrónico');
+    });
+
+    // Limpiar el formulario
+    e.target.reset();
   };
 
   return (
-    <div className="container-fluid p-5"style={{ backgroundColor: greyColor }} >
+    <div className="container-fluid p-5" style={{ backgroundColor: greyColor }}>
       <div className="mb-5 text-center">
         <h1 className="display-3 text-uppercase mb-0">Get In Touch</h1>
       </div>
@@ -70,31 +95,31 @@ function Contact() {
         </div>
       </div>
       {/* Contact Form */}
-      <div className="row g-0 justify-content-center align-items-center" style={{ borderRadius: "10px"}}>
+      <div className="row g-0 justify-content-center align-items-center" style={{ borderRadius: "10px" }}>
         <div className="col-lg-6">
           <div className="bg-dark p-5">
             <form onSubmit={handleSubmit}>
               <div className="row g-3">
                 <div className="col-6">
-                  <input type="text" className="form-control bg-light border-0 px-4" placeholder="Your Name" style={{ height: '55px', borderRadius: "10px"}} />
+                  <input type="text" name="from_name" className="form-control bg-light border-0 px-4" placeholder="Your Name" style={{ height: '55px', borderRadius: "10px" }} />
                 </div>
                 <div className="col-6">
-                  <input type="email" className="form-control bg-light border-0 px-4" placeholder="Your Email" style={{ height: '55px' }} />
+                  <input type="email" name="from_email" className="form-control bg-light border-0 px-4" placeholder="Your Email" style={{ height: '55px' }} />
                 </div>
                 <div className="col-12">
-                  <input type="text" className="form-control bg-light border-0 px-4" placeholder="Subject" style={{ height: '55px' }} />
+                  <input type="text" name="subject" className="form-control bg-light border-0 px-4" placeholder="Subject" style={{ height: '55px' }} />
                 </div>
                 <div className="col-12">
-                  <textarea className="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message" />
+                  <textarea name="message" className="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message" />
                 </div>
                 <div className="mb-3">
                   <ReCAPTCHA
-                    sitekey="6LdFrxsoAAAAAEd2JZrF6h_rMakL4FRijftbHOPz" 
+                    sitekey="6LdFrxsoAAAAAEd2JZrF6h_rMakL4FRijftbHOPz"
                     onChange={(value) => setRecaptchaValue(value)}
                   />
                 </div>
                 <div className="col-12">
-                  <button className="btn  w-100 py-3" type="submit" style={{ backgroundColor: orangeColor, color:whiteColor }} variant="outline-secondary">Send Message</button>
+                  <button className="btn  w-100 py-3" type="submit" style={{ backgroundColor: orangeColor, color: whiteColor }} variant="outline-secondary">Send Message</button>
                 </div>
               </div>
             </form>

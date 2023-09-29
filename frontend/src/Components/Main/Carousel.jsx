@@ -23,7 +23,7 @@ function Carousel() {
       <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="w-100" src="/assets/Image1.webp" alt="Image" style={{ height: '900px' }} />
+            <img className="w-100" src="/assets/Image1.webp" alt="A beautiful landscape" style={{ height: '900px' }} />
             <div className="carousel-caption" style={captionStyle}>
               <div className="p-3" style={{ maxWidth: '900px' }}>
                 <h5 className="text-white text-uppercase" style={h5Style}>My portfolio</h5>
@@ -37,7 +37,7 @@ function Carousel() {
             </div>
           </div>
           <div className="carousel-item">
-            <img className="w-100" src="/assets/mainfoto.png" alt="Image" style={{ height: '900px' }} />
+            <img className="w-100" src="/assets/mainfoto.png" alt="A beautiful landscape" style={{ height: '900px' }} />
             <div className="carousel-caption" style={captionStyle}>
               <div className="p-3" style={{ maxWidth: '900px' }}>
                 <h5 className="text-white text-uppercase" style={h5Style}>My portfolio</h5>

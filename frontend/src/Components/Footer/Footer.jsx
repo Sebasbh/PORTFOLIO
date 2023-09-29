@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
-  const [scrollToTop, setScrollToTop] = useState(false);
+  const [scrollToTop] = useState(false);
 
   const handleScrollToTop = () => {
     window.scrollTo({
