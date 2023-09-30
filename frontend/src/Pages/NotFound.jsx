@@ -1,8 +1,12 @@
 import React from 'react';
 
 function NotFound() {
+  const Style = {
+
+    fontFamily: "'Oswald', sans-serif, 'Staatliches', cursive"
+  };
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" style={Style} >
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="text-center">

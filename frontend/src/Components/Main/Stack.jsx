@@ -1,27 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3,
-  faJs,
-  faReact,
-  faNodeJs,
-  faGit,
-  faGithub,
-  faDocker,
-  faBootstrap,
-  faTrello,
-  faFigma,
-} from "@fortawesome/free-brands-svg-icons";
-
-import {
-  faDatabase,
-  faServer, 
-  faPalette,
-  faIndustry,
-  faCheckSquare, 
-} from "@fortawesome/free-solid-svg-icons";
+import { faHtml5, faCss3, faJs, faReact, faNodeJs, faGit, faGithub, faDocker, faBootstrap, faTrello, faFigma } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase, faServer, faPalette, faIndustry, faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 
 const customStyles = {
   container: {
@@ -30,7 +11,7 @@ const customStyles = {
     padding: "20px",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center", 
+    alignItems: "center",
     textAlign: "center",
   },
   title: {
@@ -68,7 +49,6 @@ const customStyles = {
     margin: "10px",
     textAlign: "center",
     width: "150px",
-
   },
 };
 
@@ -81,17 +61,17 @@ const techIcons = {
   Git: faGit,
   GitHub: faGithub,
   Docker: faDocker,
-  Trello: faTrello, 
-  Jest: faCheckSquare, 
+  Trello: faTrello,
+  Jest: faCheckSquare,
   MySQL: faDatabase,
-  MongoDB: faDatabase, 
+  MongoDB: faDatabase,
   "Express.js": faServer,
-  Materialize: faPalette, 
+  Materialize: faPalette,
   "Material-UI": faIndustry,
   Bootstrap: faBootstrap,
-  Figma: faFigma, 
- 
+  Figma: faFigma,
 };
+
 function Stack() {
   const [activeTab, setActiveTab] = useState("tab-1");
   const { t } = useTranslation();

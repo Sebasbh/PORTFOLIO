@@ -26,7 +26,6 @@ function Header() {
 
   const buttonStyle2 = {
     backgroundColor: white,
-    
     margin: "20px",
   };
 
@@ -67,7 +66,7 @@ function Header() {
             />
 
             {/* Developer Name */}
-            <h2 className="m-0 display-5" style={developerTextStyle}>
+            <h2 className=" display-5" style={developerTextStyle}>
              {t('developerName')}
             </h2>
           </a>

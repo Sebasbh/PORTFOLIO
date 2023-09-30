@@ -3,16 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 
+const Styles = {
+  Card: {
+    borderColor: "#FB5B21",
+  },
+};
+
 function Stack({ name, imageSrc, githubLink, description }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-  };
-  const Styles = {
-    Card: {
-      borderColor: "#FB5B21",
-    },
   };
 
   return (
@@ -55,22 +56,19 @@ function Projects() {
       name: "Ciberguard",
       imageSrc: "/assets/Projects/CyberGuard.png",
       githubLink: "https://github.com/Sebasbh/CyberGuard",
-      description: 
-      "CyberGuard (Secure Development Practice) project aims to enhance the security of forms on the rovikron.web.app website. This is achieved by implementing security measures on the client side, such as ReCaptcha and data validation, and on the server side, by preventing OWASP vulnerabilities like XSS and SQL Injection. Modern technology is employed, and best practices in secure development are followed.",
+      description: "CyberGuard (Secure Development Practice) project aims to enhance the security of forms on the rovikron.web.app website. This is achieved by implementing security measures on the client side, such as ReCaptcha and data validation, and on the server side, by preventing OWASP vulnerabilities like XSS and SQL Injection. Modern technology is employed, and best practices in secure development are followed.",
     },
     {
       name: "Bama Proyect",
       imageSrc: "/assets/Projects/Bama.png",
       githubLink: "https://github.com/Sebasbh/BamaProyect",
-      description: 
-      "Facturación-BAMA is a project to create an application for managing clients, orders, delivery notes, and invoices. It allows for the registration and control of these transactions while establishing relationships between them. The application includes lists of invoices, delivery notes, and orders, along with a control panel featuring financial tracking graphs.",
+      description: "Facturación-BAMA is a project to create an application for managing clients, orders, delivery notes, and invoices. It allows for the registration and control of these transactions while establishing relationships between them. The application includes lists of invoices, delivery notes, and orders, along with a control panel featuring financial tracking graphs.",
     },
     {
       name: "DroneTech",
       imageSrc: "/assets/Projects/DroneTech.png",
       githubLink: "https://github.com/Sebasbh/dronereact",
-      description:
-      "This project is a website designed for the sale of drones, featuring a range of functionalities that enhance the purchasing experience and provide an intuitive interaction for users. The website is fully responsive, which means it adapts to different devices such as mobile phones, tablets, and desktop computers.",
+      description: "This project is a website designed for the sale of drones, featuring a range of functionalities that enhance the purchasing experience and provide an intuitive interaction for users. The website is fully responsive, which means it adapts to different devices such as mobile phones, tablets, and desktop computers.",
     },
   ];
 
