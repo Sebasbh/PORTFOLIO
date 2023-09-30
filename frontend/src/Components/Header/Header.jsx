@@ -26,7 +26,7 @@ function Header() {
 
   const buttonStyle2 = {
     backgroundColor: white,
-    color: "#BDBDBF",
+    
     margin: "20px",
   };
 

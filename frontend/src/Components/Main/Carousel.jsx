@@ -40,20 +40,20 @@ function Carousel() {
           <div className="carousel-item active">
             <img
               className="w-100"
-              src="/assets/Image1.webp"
+              src="/assets/Image2.jpg"
               alt="A beautiful landscape"
-              style={{ height: "900px" }}
+              style={{ height: "1000px",  filter: "blur(2px)"  }}
             />
             <div className="carousel-caption" style={captionStyle}>
-              <div className="p-3" style={{ maxWidth: "900px" }}>
+              <div className="p-3" style={{ maxWidth: "1000px" }}>
                 <h5 className="text-white text-uppercase" style={h5Style}>
-                {t('developerName')}
+                  {t("developerName")}
                 </h5>
                 <h1
                   className="display-2 text-uppercase mb-md-4"
                   style={h1Style}
                 >
-                  {t('title')}
+                  {t("title")}
                 </h1>
                 {/* eslint-disable jsx-a11y/anchor-is-valid */}
                 <a
@@ -61,7 +61,7 @@ function Carousel() {
                   onClick={() => scrollToSection("contact")}
                   role="button"
                 >
-                 {t('contact')}
+                  {t("contact")}
                 </a>
               </div>
             </div>
@@ -71,12 +71,13 @@ function Carousel() {
               className="w-100"
               src="/assets/mainfoto.png"
               alt="A beautiful landscape"
-              style={{ height: "900px" }}
+              style={{ height: "1000px", filter: "blur(2px)"}}
             />
+
             <div className="carousel-caption" style={captionStyle}>
-              <div className="p-3" style={{ maxWidth: "900px" }}>
+              <div className="p-3" style={{ maxWidth: "1000px" }}>
                 <h5 className="text-white text-uppercase" style={h5Style}>
-                {t('developerName')}
+                  {t("developerName")}
                 </h5>
                 <h1
                   className="display-2 text-uppercase mb-md-4"
@@ -89,7 +90,7 @@ function Carousel() {
                   onClick={() => scrollToSection("contact")}
                   role="button"
                 >
-                  {t('contact')}
+                  {t("contact")}
                 </a>
               </div>
             </div>
