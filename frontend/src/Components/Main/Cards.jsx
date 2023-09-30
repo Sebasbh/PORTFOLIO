@@ -11,7 +11,7 @@ function Cards() {
   const cardStyle = {
     backgroundColor: "#FB5B21",
     width: "100%", 
-    height: "30vh", 
+    height: "20vh", 
     padding: "10px",
     display: "flex",
     flexDirection: "column",
