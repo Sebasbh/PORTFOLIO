@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function Stack({ name, imageSrc, githubLink, description }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +48,8 @@ function Stack({ name, imageSrc, githubLink, description }) {
 }
 
 function Projects() {
+  const { t } = useTranslation();
+
   const stack = [
     {
       name: "Ciberguard",
@@ -82,7 +85,7 @@ function Projects() {
     <div>
       <div className="container-fluid" style={customStyles.container}>
         <div className="text-center">
-          <h1 className="display-3 mb-5">Main Projects</h1>
+          <h1 className="display-3 mb-5">{t("projects1")}</h1>
         </div>
         <div className="row g-4">
           {stack.map((project, index) => (

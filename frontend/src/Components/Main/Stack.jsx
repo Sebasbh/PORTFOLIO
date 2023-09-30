@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Stack() {
-  const [activeTab, setActiveTab] = useState("tab-1"); 
+  const [activeTab, setActiveTab] = useState("tab-1");
+  const { t } = useTranslation();
 
   const customStyles = {
     container: {
@@ -38,9 +40,9 @@ function Stack() {
       fontFamily: "Rubik, sans-serif",
     },
     navLinkActive: {
-        backgroundColor: "#FB5B21 ",
-        borderRadius: "10px ",
-      },      
+      backgroundColor: "#FB5B21 ",
+      borderRadius: "10px ",
+    },
     tabContent: {
       padding: "10px",
     },
@@ -68,89 +70,138 @@ function Stack() {
   return (
     <div className="container-fluid" style={customStyles.container}>
       <div className="text-center">
-        <h1 style={customStyles.title}>My Stack</h1>
+        <h1 style={customStyles.title}>{t("stack")}</h1>
       </div>
       <ul className="nav nav-pills d-inline-flex" style={customStyles.nav}>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-1" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-1" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-1"
-            style={activeTab === "tab-1" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-1"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-1")}
           >
-            Key Languages and Technologies
+            {t("keyLanguagesAndTechnologies")}
           </a>
         </li>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-2" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-2" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-2"
-            style={activeTab === "tab-2" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-2"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-2")}
           >
-            Design and UI Tools and Frameworks
+            
+            {t("keyDesignAndUIToolsAndFrameworks")}
           </a>
         </li>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-3" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-3" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-3"
-            style={activeTab === "tab-3" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-3"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-3")}
           >
-            Version Control and Collaboration
+            {t("keyVersionControlAndCollaboration")}
           </a>
         </li>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-4" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-4" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-4"
-            style={activeTab === "tab-4" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-4"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-4")}
           >
-            Project Management
+            {t("keyProjectManagement")}
           </a>
         </li>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-5" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-5" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-5"
-            style={activeTab === "tab-5" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-5"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-5")}
           >
-            Testing and Code Quality
+            {t("keyTestingAndCodeQuality")}
           </a>
         </li>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-6" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-6" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-6"
-            style={activeTab === "tab-6" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-6"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-6")}
           >
-            Containers and Deployment
+            {t("keyContainersAndDeployment")}
           </a>
         </li>
         <li className="nav-item">
           <a
-            className={`nav-link rounded-pill ${activeTab === "tab-7" ? "active" : ""}`}
+            className={`nav-link rounded-pill ${
+              activeTab === "tab-7" ? "active" : ""
+            }`}
             data-bs-toggle="pill"
             href="#tab-7"
-            style={activeTab === "tab-7" ? customStyles.navLinkActive : customStyles.navLink}
+            style={
+              activeTab === "tab-7"
+                ? customStyles.navLinkActive
+                : customStyles.navLink
+            }
             onClick={() => setActiveTab("tab-7")}
           >
-            Database Management
+            
+            {t("keyDatabaseManagement")}
           </a>
         </li>
       </ul>
       <div className="tab-content  mt-5" style={customStyles.tabContent}>
-        <div id="tab-1" className={`tab-pane fade  ${activeTab === "tab-1" ? "show active" : ""}`}>
+        <div
+          id="tab-1"
+          className={`tab-pane fade  ${
+            activeTab === "tab-1" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">
             {renderTechList([
               "HTML",
@@ -162,7 +213,12 @@ function Stack() {
             ])}
           </div>
         </div>
-        <div id="tab-2" className={`tab-pane fade ${activeTab === "tab-2" ? "show active" : ""}`}>
+        <div
+          id="tab-2"
+          className={`tab-pane fade ${
+            activeTab === "tab-2" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">
             {renderTechList([
               "Materialize",
@@ -172,19 +228,44 @@ function Stack() {
             ])}
           </div>
         </div>
-        <div id="tab-3" className={`tab-pane fade ${activeTab === "tab-3" ? "show active" : ""}`}>
+        <div
+          id="tab-3"
+          className={`tab-pane fade ${
+            activeTab === "tab-3" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">{renderTechList(["Git", "GitHub"])}</div>
         </div>
-        <div id="tab-4" className={`tab-pane fade ${activeTab === "tab-4" ? "show active" : ""}`}>
+        <div
+          id="tab-4"
+          className={`tab-pane fade ${
+            activeTab === "tab-4" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">{renderTechList(["Trello"])}</div>
         </div>
-        <div id="tab-5" className={`tab-pane fade ${activeTab === "tab-5" ? "show active" : ""}`}>
+        <div
+          id="tab-5"
+          className={`tab-pane fade ${
+            activeTab === "tab-5" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">{renderTechList(["Jest"])}</div>
         </div>
-        <div id="tab-6" className={`tab-pane fade ${activeTab === "tab-6" ? "show active" : ""}`}>
+        <div
+          id="tab-6"
+          className={`tab-pane fade ${
+            activeTab === "tab-6" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">{renderTechList(["Docker"])}</div>
         </div>
-        <div id="tab-7" className={`tab-pane fade ${activeTab === "tab-7" ? "show active" : ""}`}>
+        <div
+          id="tab-7"
+          className={`tab-pane fade ${
+            activeTab === "tab-7" ? "show active" : ""
+          }`}
+        >
           <div className="row g-4">{renderTechList(["MySQL", "MongoDB"])}</div>
         </div>
       </div>

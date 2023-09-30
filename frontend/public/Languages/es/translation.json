@@ -5,6 +5,9 @@
     "contact": "Contáctame",
     "curriculum": "Descargar CV",
     "title": "Soy Desarrollador Full Stack",
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "Inglés", 
     "login": "Iniciar Sesión",
     "developerName": "Mi Portafolio",
     "text1": "Soy un apasionado desarrollador Full Stack con un sólido interés en la tecnología, caracterizado por la curiosidad y una mentalidad orientada a la solución. Soy organizado y constante, lo que me hace eficiente y puntual. Valoro mucho la comunicación y el compromiso en el trabajo en equipo.",
@@ -41,6 +44,30 @@
         "title": "Innovación",
         "description": "Me apasiona la innovación tecnológica y aspiro a formar parte de proyectos y equipos a la vanguardia de la creación de soluciones innovadoras para desafíos actuales."
     },
-    "careerContact": "Si compartes estos intereses o tienes oportunidades de colaboración que se alineen con mis metas, estaré encantado de tener una conversación contigo."
-    
+    "careerContact": "Si compartes estos intereses o tienes oportunidades de colaboración que se alineen con mis metas, estaré encantado de tener una conversación contigo.",
+    "card1": "Desarrollo Frontend",
+    "card1.1": "Me especializo en Desarrollo Frontend, creando interfaces web amigables y adaptables para mejorar la experiencia del usuario.",
+    "card2": "Desarrollo Backend",
+    "card2.1": "Destaco en Desarrollo Backend, construyendo aplicaciones sólidas en el servidor para manejar datos y lógica de manera eficiente.",
+    "card3": "Ciberseguridad",
+    "card3.1": "Mi experiencia incluye Ciberseguridad, protegiendo sistemas digitales y datos de posibles amenazas y vulnerabilidades.",
+    "keyLanguagesAndTechnologies": "Lenguajes y Tecnologías",
+    "keyDesignAndUIToolsAndFrameworks": "Herramientas y Frameworks de Diseño e Interfaz de Usuario",
+    "keyVersionControlAndCollaboration": "Control de Versiones y Colaboración",
+    "keyProjectManagement": "Gestión de Proyectos",
+    "keyTestingAndCodeQuality": "Pruebas y Calidad del Código",
+    "keyContainersAndDeployment": "Contenedores y Despliegue",
+    "keyDatabaseManagement": "Gestión de Bases de Datos",
+    "projects1": "Proyectos Principales",
+    "contact1": "Ponte contacto",
+    "contact2": "Perfil de LinkedIn",
+    "contact3": "Perfil de GitHub",
+    "contact4": "Llámame",
+    "form1": "Tu Nombre",
+    "form2": "Tu Correo Electrónico",
+    "form3": "Asunto",
+    "form4": "Mensaje",
+    "botton": "Enviar Mensaje",
+    "alert": "Porfavor complete el reCAPTCHA"
+
 }

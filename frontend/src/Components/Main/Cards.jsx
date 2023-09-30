@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
+
 
 function Cards() {
+  const { t } = useTranslation();
   const style = {
     color: "#222429",
   };
@@ -21,9 +24,9 @@ function Cards() {
           <div className="card text-center" style={cardStyle}>
             <div className="card-body">
               <i className="flaticon-six-pack display-4 text-white mb-4"></i>
-              <h3 className="card-title">Frontend Development</h3>
+              <h3 className="card-title">{t("card1")}</h3>
               <p className="card-text text-white">
-                I specialize in Frontend Development, creating user-friendly and responsive web interfaces to enhance the user experience.
+                {t("card1.1")}
               </p>
             </div>
           </div>
@@ -32,9 +35,9 @@ function Cards() {
           <div className="card text-center" style={cardStyle}>
             <div className="card-body">
               <i className="flaticon-barbell display-4 text-white mb-4"></i>
-              <h3 className="card-title">Backend Development</h3>
+              <h3 className="card-title">{t("card2")}</h3>
               <p className="card-text text-white">
-                I excel in Backend Development, building robust server-side applications to handle data and logic efficiently.
+              {t("card2.1")}
               </p>
             </div>
           </div>
@@ -43,9 +46,9 @@ function Cards() {
           <div className="card text-center" style={cardStyle}>
             <div className="card-body">
               <i className="flaticon-bodybuilding display-4 text-white mb-4"></i>
-              <h3 className="card-title">Cybersecurity</h3>
+              <h3 className="card-title">{t("card3")}</h3>
               <p className="card-text text-white">
-                My expertise includes Cybersecurity, safeguarding digital systems and data from potential threats and vulnerabilities.
+              {t("card3.1")}              
               </p>
             </div>
           </div>

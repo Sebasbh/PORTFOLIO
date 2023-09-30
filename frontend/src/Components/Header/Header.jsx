@@ -27,7 +27,7 @@ function Header() {
   const buttonStyle2 = {
     backgroundColor: white,
     color: "#BDBDBF",
-    margin: "10px",
+    margin: "20px",
   };
 
   const headerStyle = {
@@ -162,7 +162,7 @@ function Header() {
             <Button
               href="#"
               className="btn py-md-2 px-md-5"
-              style={{ ...buttonStyle, float: "right" }}
+              style={{ ...buttonStyle, float: "right", marginLeft: "10px" }}
               variant="outline-secondary"
             >
               {t('login')}
