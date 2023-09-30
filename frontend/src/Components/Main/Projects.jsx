@@ -76,7 +76,6 @@ function Projects() {
 
   const customStyles = {
     container: {
-      fontFamily: "Rubik, sans-serif",
       padding: "30px",
     },
   };

@@ -6,6 +6,7 @@ import Projects from './Projects'
 import Contact from './Contact'
 import Cards from './Cards'
 
+
 function Main() {
   return (
     <div>

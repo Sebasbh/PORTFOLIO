@@ -10,8 +10,9 @@ function Cards() {
 
   const cardStyle = {
     backgroundColor: "#FB5B21",
-    width: "100%", // Ancho fijo para las cartas
-    height: "20vh", // Alto fijo para las cartas
+    width: "100%", 
+    height: "30vh", 
+    padding: "10px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

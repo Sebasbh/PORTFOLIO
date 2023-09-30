@@ -10,15 +10,10 @@ function Stack() {
       backgroundColor: "#222429",
       color: "#222429",
       padding: "20px",
-      fontFamily: "Rubik, sans-serif",
     },
     title: {
       color: "#FB5B21",
-      fontSize: "3rem",
-      fontWeight: "bold",
-      margin: "0",
-      padding: "20px 0",
-      fontFamily: "Rubik, sans-serif",
+
     },
     nav: {
       backgroundColor: "#FFF",
@@ -27,7 +22,6 @@ function Stack() {
       display: "flex",
       justifyContent: "center",
       padding: "10px 0",
-      fontFamily: "Rubik, sans-serif",
       margin: "10px",
     },
     navLink: {
@@ -37,7 +31,6 @@ function Stack() {
       padding: "10px 20px",
       borderRadius: "10px",
       transition: "background-color 0.3s",
-      fontFamily: "Rubik, sans-serif",
     },
     navLinkActive: {
       backgroundColor: "#FB5B21 ",
@@ -53,7 +46,6 @@ function Stack() {
       borderRadius: "5px",
       margin: "10px",
       textAlign: "center",
-      fontFamily: "Rubik, sans-serif",
     },
   };
 

@@ -33,8 +33,9 @@ function Header() {
   const headerStyle = {
     position: "fixed",
     width: "100%",
-    zIndex: 1000,
+    zIndex: 1000
   };
+  ;
   
   const greyColor = "#BDBDBF";
 
