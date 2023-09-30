@@ -1,0 +1,46 @@
+{
+    "about": "About Me",
+    "stack": "My Stack",
+    "projects": "My Projects",
+    "contact": "Contact Me",
+    "curriculum": "Download CV",
+    "title": "I am a Full Stack developer",
+    "login": "Login",
+    "developerName": "My Portfolio",
+    "text1": "I am a passionate Full Stack developer with a strong interest in technology, characterized by curiosity and a solution-oriented mindset. I am organized and consistent, which makes me efficient and punctual. I highly value communication and commitment in teamwork.",
+    "text2": "Furthermore, my experience in karate has instilled discipline and tenacity in me, particularly in high-pressure situations. I am seeking opportunities within a dynamic company to contribute and continue learning in my career as a developer.",
+    "education": "Education",
+    "experience": "Experience",
+    "interests": "MY INTERESTS",
+    "goals": "MY PROFESSIONAL GOALS",
+    "course1": "Cybersecurity Course (Hours: 250)",
+    "course2": "Full Stack Web Development Bootcamp (Hours: 850)",
+    "experience1.1": "Support in technical design by analyzing the technical requirements of the application.",
+    "experience1.2": "Assist in the integration of technical components and applications to meet business requirements.",
+    "experience1.3": "Conduct unit tests and participate in integration testing.",
+    "experience1.4": "Maintain, adjust, and repair applications to ensure their performance aligns with technical and functional specifications.",
+    "experience1.5": "Document and provide training and user support.",
+    "experience2.1": "Full Stack Developer in an e-commerce hackathon, enhancing UX, search, and security.",
+    "experience2.2": "Designed functionalities, scalability, database architecture, and RESTful API.",
+    "experience2.3": "Proficient in problem-solving under pressure.",
+    "interests0": "Outside of my work as a Full Stack developer, I have a wide range of interests that keep me motivated and well-rounded. Here are a few things I'm passionate about:",
+    "interests1": "Technology and Innovation: I'm always exploring the latest trends and innovations in the tech world. Whether it's artificial intelligence, blockchain, or the latest gadgets, I'm eager to learn and stay updated.",
+    "interests2": "Teamwork and Collaboration: Collaboration is a key aspect of my work, and I apply the principles I've learned in karate to build strong, communicative teams. I believe that great teamwork is the foundation of success.",
+    "interests3": "Continuous Learning: I'm a strong believer in lifelong learning. Whether it's picking up a new programming language or diving into a non-tech-related subject, I'm always seeking opportunities to expand my knowledge and skills.",
+    "interests4": "Feel free to reach out if you share any of these interests or if you'd like to connect and discuss potential collaborations or opportunities. I'm excited to engage with like-minded individuals and organizations.",
+    "careerGoals": "While I won't delve into specific projects in this tab, I'd like to share a bit about my career goals and focus as a Full Stack developer.",
+    "careerGoal1": {
+        "title": "Continuous Learning",
+        "description": "My primary goal is to keep learning and growing in the world of technology. I'm committed to the constant improvement of my skills and knowledge in web development and related areas."
+    },
+    "careerGoal2": {
+        "title": "Collaboration",
+        "description": "Valuing collaboration and teamwork, I seek opportunities to work with individuals who are passionate about technology and innovation. I believe that together we can achieve remarkable things."
+    },
+    "careerGoal3": {
+        "title": "Innovation",
+        "description": "I'm passionate about technological innovation and aspire to be part of projects and teams at the forefront of creating innovative solutions for current challenges."
+    },
+    "careerContact": "If you share these interests or have collaboration opportunities that align with my goals, I'd be delighted to have a conversation with you."
+}
+  

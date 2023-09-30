@@ -1,0 +1,46 @@
+{
+    "about": "Sobre mí",
+    "stack": "Mi Stack",
+    "projects": "Mis Proyectos",
+    "contact": "Contáctame",
+    "curriculum": "Descargar CV",
+    "title": "Soy Desarrollador Full Stack",
+    "login": "Iniciar Sesión",
+    "developerName": "Mi Portafolio",
+    "text1": "Soy un apasionado desarrollador Full Stack con un sólido interés en la tecnología, caracterizado por la curiosidad y una mentalidad orientada a la solución. Soy organizado y constante, lo que me hace eficiente y puntual. Valoro mucho la comunicación y el compromiso en el trabajo en equipo.",
+    "text2": "Además, mi experiencia en karate ha inculcado disciplina y tenacidad en mí, especialmente en situaciones de alta presión. Estoy buscando oportunidades dentro de una empresa dinámica para contribuir y seguir aprendiendo en mi carrera como desarrollador.",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "interests": "Mis interes",
+    "goals": "Mis metas profesionales",
+    "course1": "Curso de Ciberseguridad (Horas: 250)",
+    "course2": "Bootcamp de Desarrollo Web Full Stack (Hours: 850)",
+    "experience1.1": "Apoyo en el diseño técnico mediante el análisis de los requisitos técnicos de la aplicación.",
+    "experience1.2": "Ayuda en la integración de componentes técnicos y aplicaciones para cumplir con los requisitos empresariales.",
+    "experience1.3": "Realiza pruebas unitarias y participa en pruebas de integración.",
+    "experience1.4": "Mantén, ajusta y repara aplicaciones para asegurar que su rendimiento se alinee con las especificaciones técnicas y funcionales.",
+    "experience1.5": "Documenta y proporciona capacitación y soporte al usuario.",
+    "experience2.1": "Desarrollador Full Stack en un hackatón de comercio electrónico, mejorando la experiencia de usuario, la búsqueda y la seguridad.",
+    "experience2.2": "Diseñé funcionalidades, escalabilidad, arquitectura de base de datos y API RESTful.",
+    "experience2.3": "Competente en resolución de problemas bajo presión.",
+    "interests0": "Fuera de mi trabajo como desarrollador Full Stack, tengo una amplia gama de intereses que me mantienen motivado y bien informado. Aquí hay algunas cosas que me apasionan:",
+    "interests1": "Tecnología e Innovación: Siempre estoy explorando las últimas tendencias e innovaciones en el mundo de la tecnología. Ya sea inteligencia artificial, blockchain o los últimos dispositivos, estoy ansioso por aprender y mantenerme actualizado.",
+    "interests2": "Trabajo en Equipo y Colaboración: La colaboración es un aspecto clave de mi trabajo, y aplico los principios que he aprendido en karate para construir equipos fuertes y comunicativos. Creo que un gran trabajo en equipo es la base del éxito.",
+    "interests3": "Aprendizaje Continuo: Soy un firme creyente en el aprendizaje continuo. Ya sea aprender un nuevo lenguaje de programación o sumergirme en un tema no relacionado con la tecnología, siempre estoy buscando oportunidades para expandir mi conocimiento y habilidades.",
+    "interests4": "No dudes en ponerte en contacto si compartes alguno de estos intereses o si te gustaría conectarte y discutir posibles colaboraciones u oportunidades. Estoy emocionado de interactuar con personas y organizaciones afines.",
+    "careerGoals": "Aunque no profundizaré en proyectos específicos en esta pestaña, me gustaría compartir un poco sobre mis metas profesionales y enfoque como desarrollador Full Stack.",
+    "careerGoal1": {
+        "title": "Aprendizaje Continuo",
+        "description": "Mi objetivo principal es seguir aprendiendo y creciendo en el mundo de la tecnología. Estoy comprometido con la mejora constante de mis habilidades y conocimientos en desarrollo web y áreas relacionadas."
+    },
+    "careerGoal2": {
+        "title": "Colaboración",
+        "description": "Valorando la colaboración y el trabajo en equipo, busco oportunidades para trabajar con personas apasionadas por la tecnología e innovación. Creo que juntos podemos lograr cosas extraordinarias."
+    },
+    "careerGoal3": {
+        "title": "Innovación",
+        "description": "Me apasiona la innovación tecnológica y aspiro a formar parte de proyectos y equipos a la vanguardia de la creación de soluciones innovadoras para desafíos actuales."
+    },
+    "careerContact": "Si compartes estos intereses o tienes oportunidades de colaboración que se alineen con mis metas, estaré encantado de tener una conversación contigo."
+    
+}
