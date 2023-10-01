@@ -1,10 +1,11 @@
 import React from "react";
 import { Navbar, Container, Button, Nav, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { useTranslation } from "react-i18next"; 
+import { faEnvelope, faPhone, faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub,   } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import CurriculumsMenu from "./Curriculums";
 
 
 function Header() {
@@ -22,31 +23,29 @@ function Header() {
   const buttonStyle = {
     backgroundColor: orangeColor,
     color: "white",
+    float: "right", 
+    marginLeft: "10px", 
+    display: "flex"
+    
   };
 
-  const buttonStyle2 = {
-    backgroundColor: white,
-    margin: "20px",
-  };
 
   const headerStyle = {
     position: "fixed",
     width: "100%",
-    zIndex: 1000
+    zIndex: 1000,
   };
-  ;
-  
   const greyColor = "#BDBDBF";
 
-    const scrollToSection = (sectionId) => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        window.scrollTo({
-          top: section.offsetTop,
-          behavior: "smooth",
-        });
-      }
-    };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <div className="container-fluid bg-dark px-0" style={headerStyle}>
@@ -67,7 +66,7 @@ function Header() {
 
             {/* Developer Name */}
             <h2 className=" display-5" style={developerTextStyle}>
-             {t('developerName')}
+              {t("developerName")}
             </h2>
           </a>
         </div>
@@ -134,38 +133,29 @@ function Header() {
               <Navbar.Collapse id="navbarCollapse">
                 <Nav className="mr-auto py-0">
                   <Nav.Link onClick={() => scrollToSection("about")}>
-                  {t('about')}
+                    {t("about")}
                   </Nav.Link>
                   <Nav.Link onClick={() => scrollToSection("stack")}>
-                  {t('stack')}
+                    {t("stack")}
                   </Nav.Link>
                   <Nav.Link onClick={() => scrollToSection("projects")}>
-                  {t('projects')}
+                    {t("projects")}
                   </Nav.Link>
                   <Nav.Link onClick={() => scrollToSection("contact")}>
-                  {t('contact')}
+                    {t("contact")}
                   </Nav.Link>
                 </Nav>
-                <Button
-                  href="/assets/Curriculums/Curriculum Vitae (EN).pdf" // Reemplaza esta URL con la ubicación real de tu CV
-                  target="_blank"
-                  className=" py-md-2 px-md-4"
-                  style={{ ...buttonStyle2 }}
-                  variant="outline-secondary"
-                  download="Curriculum Vitae (EN).pdf" // Nombre del archivo que se descargará
-                >
-                  {t('curriculum')}
-                </Button>
+                <CurriculumsMenu/>
               </Navbar.Collapse>
             </Container>
-            <LanguageSwitcher/>
+            <LanguageSwitcher />
             <Button
-              href="#"
+              href="/login"
               className="btn py-md-2 px-md-5"
-              style={{ ...buttonStyle, float: "right", marginLeft: "10px" }}
+              style={{ ...buttonStyle }}
               variant="outline-secondary"
             >
-              {t('login')}
+              <FontAwesomeIcon icon={faRightToBracket} /> {t("login")}
             </Button>
           </Navbar>
         </div>
