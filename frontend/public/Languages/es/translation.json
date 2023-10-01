@@ -68,6 +68,7 @@
     "form3": "Asunto",
     "form4": "Mensaje",
     "botton": "Enviar Mensaje",
-    "alert": "Porfavor complete el reCAPTCHA"
-
+    "alert": "Porfavor complete el reCAPTCHA",
+    "successfully": "Correo electrónico enviado exitosamente",
+    "Error": "Error sending email"
 }

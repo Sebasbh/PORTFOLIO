@@ -16,6 +16,7 @@ const customStyles = {
   },
   title: {
     color: "#FB5B21",
+    fontsize: "4rem"
   },
   nav: {
     backgroundColor: "#FFF",
