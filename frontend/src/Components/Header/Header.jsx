@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Container, Button, Nav, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faRightToBracket } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub,   } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faPhone,
+  faRightToBracket,
+} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import CurriculumsMenu from "./Curriculums";
 
-
 function Header() {
   const { t } = useTranslation();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const orangeColor = "#FB5B21";
   const white = "#FFFFFF";
@@ -23,12 +27,11 @@ function Header() {
   const buttonStyle = {
     backgroundColor: orangeColor,
     color: "white",
-    float: "right", 
-    marginLeft: "10px", 
-    display: "flex"
-    
+    float: "right",
+    marginLeft: "10px",
+    display: "flex",
+    alignItems: "center",
   };
-
 
   const headerStyle = {
     position: "fixed",
@@ -36,6 +39,9 @@ function Header() {
     zIndex: 1000,
   };
   const greyColor = "#BDBDBF";
+  const imageStyle = {
+    objectFit: "cover",
+  };
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -47,8 +53,27 @@ function Header() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="container-fluid bg-dark px-0" style={headerStyle}>
+    <div
+      className={`container-fluid ${isScrolled ? "bg-light" : "bg-dark"} px-0`}
+      style={headerStyle}
+    >
       <div className="row gx-0">
         {/* Logo and Developer Name */}
         <div className="col-lg-3 bg-dark d-none d-lg-block">
@@ -58,14 +83,23 @@ function Header() {
           >
             {/* Logo */}
             <Image
-              src="/assets/Logo.png"
-              alt="Logo"
+              src={isScrolled ? "/assets/Image.jpg" : "/assets/Logo.png"}
+              alt={isScrolled ? "Image" : "Logo"}
               width={70}
-              className="mr-3"
+              height={70}
+              className={`mr-3 rounded-circle square-image ${
+                isScrolled ? "flip" : ""
+              }`}
+              style={{
+                ...imageStyle,
+                transformStyle: "preserve-3d",
+                transition:
+                  "transform 5s ease-in-out, box-shadow 5s ease-in-out",
+              }}
             />
 
             {/* Developer Name */}
-            <h2 className=" display-5" style={developerTextStyle}>
+            <h2 className="display-5" style={developerTextStyle}>
               {t("developerName")}
             </h2>
           </a>
@@ -81,7 +115,7 @@ function Header() {
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   style={{ color: orangeColor }}
-                  className=" me-2"
+                  className="me-2"
                 />
                 <h6 className="mb-0">sebasheins@gmail.com</h6>
               </div>
@@ -145,17 +179,23 @@ function Header() {
                     {t("contact")}
                   </Nav.Link>
                 </Nav>
-                <CurriculumsMenu/>
+                <CurriculumsMenu />
               </Navbar.Collapse>
             </Container>
             <LanguageSwitcher />
             <Button
               href="/login"
               className="btn py-md-2 px-md-5"
-              style={{ ...buttonStyle }}
+              style={{
+                ...buttonStyle,
+              }}
               variant="outline-secondary"
             >
-              <FontAwesomeIcon icon={faRightToBracket} /> {t("login")}
+              <FontAwesomeIcon
+                icon={faRightToBracket}
+                style={{ marginRight: "10px" }}
+              />
+              {t("login")}
             </Button>
           </Navbar>
         </div>

@@ -158,7 +158,7 @@ const Contact = () => {
         style={{ borderRadius: "10px" }}
       >
         <div className="col-lg-6">
-          <div className="bg-dark p-5">
+          <div className="bg-dark p-5" style={{ borderRadius: "10px" }}>
             <form onSubmit={handleEmailSubmit}>
               <div className="row g-3">
                 <div className="col-6">
@@ -176,7 +176,7 @@ const Contact = () => {
                     name="from_email"
                     className="form-control bg-light border-0 px-4"
                     placeholder={t("form2")}
-                    style={{ height: "55px" }}
+                    style={{ height: "55px", borderRadius: "10px" }}
                   />
                 </div>
                 <div className="col-12">
@@ -185,7 +185,7 @@ const Contact = () => {
                     name="subject"
                     className="form-control bg-light border-0 px-4"
                     placeholder={t("form3")}
-                    style={{ height: "55px" }}
+                    style={{ height: "55px", borderRadius: "10px" }}
                   />
                 </div>
                 <div className="col-12">
@@ -194,6 +194,7 @@ const Contact = () => {
                     className="form-control bg-light border-0 px-4 py-3"
                     rows="4"
                     placeholder={t("form4")}
+                    style={{ borderRadius: "10px" }}
                   />
                 </div>
                 <div className="mb-3">
@@ -204,9 +205,13 @@ const Contact = () => {
                 </div>
                 <div className="col-12">
                   <button
-                    className="btn  w-100 py-3"
+                    className="btn w-100 py-3"
                     type="submit"
-                    style={{ backgroundColor: orangeColor, color: whiteColor }}
+                    style={{
+                      backgroundColor: orangeColor,
+                      color: whiteColor,
+                      borderRadius: "10px",
+                    }}
                     variant="outline-secondary"
                   >
                     {t("botton")}

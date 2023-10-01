@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Button, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function CurriculumsMenu() {
   const { t } = useTranslation();
@@ -23,7 +25,7 @@ function CurriculumsMenu() {
           style={{ ...buttonStyle2 }}
           variant="outline-seconda"
           id="dropdown-basic"
-        >
+        ><FontAwesomeIcon icon={faFileArrowDown} style={{ marginRight: "10px" }}/>
           {t("curriculum")}
         </Dropdown.Toggle>
 

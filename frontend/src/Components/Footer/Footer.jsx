@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import PrivacyPolicyModal from "./PrivacyPolicyModal";
+import { useTranslation } from "react-i18next";
 
-function Footer() {
+const Footer = () => {
+  const { t } = useTranslation();
   const [scrollToTop, setScrollToTop] = useState(false);
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -13,13 +17,13 @@ function Footer() {
     });
   };
 
+  const handleClosePrivacyPolicy = () => {
+    setShowPrivacyPolicy(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrollToTop(true);
-      } else {
-        setScrollToTop(false);
-      }
+      setScrollToTop(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,7 +35,7 @@ function Footer() {
 
   const customStyles = {
     icon: {
-      color: "#FFFF",
+      color: "#FFFFFF",
       fontSize: "24px",
     },
     button: {
@@ -48,13 +52,18 @@ function Footer() {
     },
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-dark text-light py-4">
       <Container>
         <Row>
           <Col className="text-center">
             <p className="mb-0">
-              &copy; {new Date().getFullYear()} Sebastian Benavides Heins
+              &copy; {currentYear} Sebastian Benavides Heins |{" "}
+              <Button variant="link" style={{ color: "#FB5B21",}} onClick={() => setShowPrivacyPolicy(true)}>
+              {t("Policy1")}
+              </Button>
             </p>
           </Col>
         </Row>
@@ -64,10 +73,12 @@ function Footer() {
         style={customStyles.button}
         onClick={handleScrollToTop}
       >
-        <FontAwesomeIcon icon={faAnglesUp} style={customStyles.icon}  />
+        <FontAwesomeIcon icon={faAngleUp} style={customStyles.icon} />
       </button>
+      <PrivacyPolicyModal show={showPrivacyPolicy} handleClose={handleClosePrivacyPolicy} />
+
     </footer>
   );
-}
+};
 
 export default Footer;

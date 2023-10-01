@@ -7,7 +7,7 @@
     "title": "Soy Desarrollador Full Stack",
     "language": "Idioma",
     "spanish": "Español",
-    "english": "Inglés", 
+    "english": "Inglés",
     "login": "Iniciar Sesión",
     "developerName": "Mi Portafolio",
     "text1": "Soy un apasionado desarrollador Full Stack con un sólido interés en la tecnología, caracterizado por la curiosidad y una mentalidad orientada a la solución. Soy organizado y constante, lo que me hace eficiente y puntual. Valoro mucho la comunicación y el compromiso en el trabajo en equipo.",
@@ -70,5 +70,10 @@
     "botton": "Enviar Mensaje",
     "alert": "Porfavor complete el reCAPTCHA",
     "successfully": "Correo electrónico enviado exitosamente",
-    "Error": "Error sending email"
+    "Error": "Error al enviar el correo electrónico",
+    "Policy1": "Política de privacidad",
+    "Policy2": "Información personal",
+    "Policy3": "En nuestro sitio web, respetamos su privacidad y no recopilamos información personal sin su consentimiento. Cualquier información personal que nos proporcione solo se utilizará para los fines especificados y no se compartirá con terceros sin su consentimiento explícito.",
+    "Policy4": "Si tiene alguna pregunta o inquietud acerca de nuestra política de privacidad, no dude en ",
+    "Close": "Cerrar"
 }

@@ -70,5 +70,10 @@
     "botton": "Send Message",
     "alert": "Please complete the reCAPTCHA",
     "successfully": "Email sent successfully",
-    "Error": "Error sending email"
+    "Error": "Error sending email",
+    "Policy1": "Privacy Policy",
+    "Policy2": "Personal Information",
+    "Policy3": "On our website, we respect your privacy and do not collect personal information without your consent. Any personal information you provide to us will only be used for the specified purposes and will not be shared with third parties without your explicit consent.",
+    "Policy4": "If you have any questions or concerns about our privacy policy, please do not hesitate to ",
+    "Close": "Close"
 }

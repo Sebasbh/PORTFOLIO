@@ -12,10 +12,9 @@ function Cards() {
     backgroundColor: "#FB5B21",
     width: "100%", 
     height: "20vh", 
-    padding: "10px",
+    padding: "20px",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    flexDirection: "column"
   };
 
   return (
