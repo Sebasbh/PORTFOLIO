@@ -3,29 +3,21 @@ import { Dropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import './styles.css'; // Import the CSS file
 
 function CurriculumsMenu() {
   const { t } = useTranslation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  const orangeColor = "#FB5B21";
-  const white = "#FFFFFF";
-  const grey = "#807F93";
-
-  const buttonStyle2 = {
-    backgroundColor: white,
-
-    margin: "20px",
-  };
-
   return (
     <>
       <Dropdown show={isDropdownOpen} onToggle={(isOpen) => setDropdownOpen(isOpen)}>
         <Dropdown.Toggle
-          style={{ ...buttonStyle2 }}
+          className="button-style-2" // Apply the CSS class
           variant="outline-seconda"
           id="dropdown-basic"
-        ><FontAwesomeIcon icon={faFileArrowDown} style={{ marginRight: "10px" }}/>
+        >
+          <FontAwesomeIcon icon={faFileArrowDown} style={{ marginRight: "10px" }} />
           {t("curriculum")}
         </Dropdown.Toggle>
 
@@ -52,4 +44,3 @@ function CurriculumsMenu() {
 }
 
 export default CurriculumsMenu;
-

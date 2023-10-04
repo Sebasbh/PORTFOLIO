@@ -1,0 +1,30 @@
+/* CurriculumsMenu.jsx */
+.button-style-2 {
+    background-color: white;
+    margin: 20px;
+  }
+  
+  /* Header.jsx */
+  .developer-text {
+    color: #FB5B21;
+    text-transform: uppercase;
+    margin-left: 23px;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .header-image {
+    object-fit: cover;
+    transform-style: preserve-3d;
+    transition: transform 5s ease-in-out, box-shadow 5s ease-in-out;
+  }
+  
+  /* LanguageSwitcher.jsx */
+  .language-button {
+    background-color: #BDBDBF;
+  }
+  
