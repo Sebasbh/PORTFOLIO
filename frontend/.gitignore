@@ -10,8 +10,11 @@
 
 # production
 /build
+# Variables de entorno
+.env*
 
 # misc
+.gitgnore
 .DS_Store
 .env.local
 .env.development.local

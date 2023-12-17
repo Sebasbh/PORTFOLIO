@@ -1,9 +1,8 @@
 // api.js
-const apiUrl = "http://localhost:8000"; 
 
-export const loginUser = async (username, password) => {
+export const loginUser = async (username, password, serverUrl = "http://localhost:8000") => {
   try {
-    const response = await fetch(`${apiUrl}/admin/login`, {
+    const response = await fetch(`${serverUrl}/admin/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

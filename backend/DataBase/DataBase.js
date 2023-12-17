@@ -3,16 +3,31 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const url = process.env.MONGODB_URI;
+const localDBUrl = process.env.LOCAL_DB_URL;
+const atlasDBUrl = process.env.ATLAS_DB_URL;
 
-mongoose.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log('Conectado a MongoDB'))
-.catch((error) => {
-    console.error('Error al conectar a MongoDB:', error);
-    process.exit(1);
-});
+// Función para conectar a la base de datos local
+export const connectToLocalDB = async () => {
+  try {
+    await mongoose.connect(localDBUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Conexión a la base de datos local establecida');
+  } catch (error) {
+    console.error('Error al conectar a la base de datos local:', error);
+  }
+};
 
-export default mongoose.connection;
+// Función para conectar a la base de datos de Atlas
+export const connectToAtlasDB = async () => {
+  try {
+    await mongoose.connect(atlasDBUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Conexión a la base de datos de Atlas establecida');
+  } catch (error) {
+    console.error('Error al conectar a la base de datos de Atlas:', error);
+  }
+};
