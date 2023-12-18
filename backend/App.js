@@ -9,7 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Configuraciones iniciales
-app.use(cors());
+app.use(cors({
+  origin: ['https://sebastiancreativeportfolio.vercel.app', 'http://localhost:3000'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

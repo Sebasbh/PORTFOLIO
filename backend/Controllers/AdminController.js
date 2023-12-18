@@ -31,8 +31,7 @@ const login = async (req, res) => {
     const admin = await adminModel.findOne({ username });
 
     if (!admin || !(await bcrypt.compare(password, admin.password))) {
-      console.log(password)
-      console.log(admin.password)
+
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
