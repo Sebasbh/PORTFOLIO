@@ -39,7 +39,7 @@ const login = async (req, res) => {
     // Generar un token JWT después de una autenticación exitosa
     const token = jwt.sign({ adminId: admin._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    res.status(200).json({ token:token });
+    res.status(200).json({token });
   } catch (error) {
     // Manejar errores de manera adecuada
     console.error('Error during authentication:', error);

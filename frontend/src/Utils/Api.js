@@ -1,27 +1,23 @@
-// api.js
+// Api.js
 
-export const loginUser = async (username, password, serverUrl = "http://localhost:8000") => {
+import axios from 'axios';
+
+export const url = {
+  apiUrl:'http://localhost:8000/admin',
+};
+
+export const login = async (username, password) => {
   try {
-    const response = await fetch(`${serverUrl}/admin/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
+    const response = await axios.post(`${url.apiUrl}/login`, {
+      username,
+      password,
     });
-
-    if (response.ok) {
-      const data = await response.json();
-      const token = data.token;
-      return token;
-    } else {
-      throw new Error('Nombre de usuario o contraseña incorrectos');
-    }
+    // Manejar la respuesta según tus necesidades
+    console.log('Server Response:', response.data); 
+    return response.data;
   } catch (error) {
-    console.error('Error durante la autenticación:', error);
+    // Manejar errores
+    console.error('Error during login:', error);
     throw error;
   }
 };

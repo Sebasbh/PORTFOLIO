@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../Utils/Api';
+import { login } from '../Utils/Api';
 import '../Styles/Login.css';
 
 const Login = () => {
@@ -12,11 +12,9 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const token = await loginUser(username, password);
-
+            const token = await login(username, password);
             // Almacena el token en el almacenamiento local (puedes elegir la mejor opción para tu aplicación)
-            localStorage.setItem('token', token);
-
+            localStorage.setItem('tokenPortfolio', JSON.stringify(token));
             // Redirige al usuario al dashboard
             navigate('/dashboard');
         } catch (error) {
