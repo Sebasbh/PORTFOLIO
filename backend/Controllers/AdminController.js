@@ -25,6 +25,10 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
+  
   try {
     const { username, password } = req.body;
 
